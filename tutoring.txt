@@ -1,0 +1,36 @@
+#Tutoring 
+#If the output is an error comment it out; otherwise type the output below the line
+x = 4.0
+y = 2
+#What is output
+print(type(x+y))
+print(x+y)
+x = "str"
+y = 5
+#What is output
+print(type(x*y))
+print(x*y)
+x = 4.0
+y = 8
+#What is output
+print(type(y//x))
+print(y//x)
+print(type(y/x))
+print(y/x)
+x = 4.0
+y = "str"
+#What is output
+print(type(y**x))
+print(y**x)
+#What is output
+x = 3
+y = 2
+print(x % y)
+#What is output
+x = "3.2"
+print(int(x))
+print(int(float(x)))
+x = 4.0
+y = 2
+#What is output
+print(str(x+y*2)*4)
