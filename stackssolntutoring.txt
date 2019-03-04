@@ -1,0 +1,52 @@
+import java.util.*;
+class Solution{
+	public static void complete(String s){
+        Stack open = new Stack();
+        for(int i = 0; i < s.length(); i++){
+        String input = s.substring(i, i+1);
+        if(input.equals("(") || input.equals("{") || input.equals("[") ){
+            open.push(input);
+            //System.out.println("Push")
+            }
+            if(input.equals(")")){
+             if(!open.empty()){
+             if(open.peek().equals("(")){
+                 open.pop();
+             }
+             }
+             else{
+                 open.push(" ");
+             }
+            }
+            if(input.equals("}")){
+                if(!open.empty()){
+                if(open.peek().equals("{")){
+                    open.pop();
+                }
+                }
+                else{
+                    open.push(" ");
+                }
+            } 
+            if(input.equals("]")){
+                if(!open.empty()){
+               if(open.peek().equals("[")){
+                   open.pop();
+               }
+                }
+                else{
+                    open.push(" ");
+                }
+            }
+        }
+        System.out.println(open.empty());
+    }
+	public static void main(String []argh)
+	{
+		Scanner sc = new Scanner(System.in);
+		while (sc.hasNext()) {
+			String input=sc.next();
+            complete(input);
+		}
+	}
+}
